@@ -469,15 +469,8 @@ function Approach() {
    RESULTS
    ═══════════════════════════════════════════════════ */
 function Results() {
-  const [sRef, sVis] = useReveal();
-  const [tRef, tVis] = useReveal();
-  const stats = [
-    
-    { end: 3, suffix: "\u00D7", label: "Avg Lead Increase" },
-    
-    { end: 12, suffix: "+", label: "Industries Served" },
-  ];
-  const testimonials = [
+    const [tRef, tVis] = useReveal();
+    const testimonials = [
     { q: "They rebuilt our entire online presence and we saw results within the first month. The best part \u2014 they explained everything in plain English.", name: "Sarah M.", role: "Fitness Studio Owner" },
     { q: "I was drowning in manual follow-ups. They set up automation that basically runs my client pipeline on autopilot now.", name: "James K.", role: "Consulting Firm Founder" },
     { q: "No upselling. No jargon. Just a team that genuinely wanted to help our business grow. Our organic traffic tripled in six months.", name: "Maria L.", role: "E-commerce Director" },
@@ -486,18 +479,6 @@ function Results() {
   return (
     <section id="results" style={{ padding: "clamp(80px,10vw,140px) 24px", background: "#070a0c" }}>
       <div style={{ maxWidth: 1080, margin: "0 auto" }}>
-        <div ref={sRef} style={{
-          display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px,1fr))", gap: 32,
-          marginBottom: "clamp(60px,8vw,100px)", padding: "48px 0",
-          borderTop: "1px solid rgba(0,212,170,0.08)", borderBottom: "1px solid rgba(0,212,170,0.08)",
-        }}>
-          {stats.map((s, i) => (
-            <div key={i} style={{ textAlign: "center", opacity: sVis ? 1 : 0, transform: sVis ? "translateY(0)" : "translateY(24px)", transition: `all 0.7s cubic-bezier(0.16,1,0.3,1) ${i * 0.12}s` }}>
-              <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: 56, color: B.ac, lineHeight: 1 }}><Counter end={s.end} suffix={s.suffix} active={sVis} /></div>
-              <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 12, fontWeight: 600, color: "rgba(255,255,255,0.3)", letterSpacing: 1.5, textTransform: "uppercase", marginTop: 12 }}>{s.label}</p>
-            </div>
-          ))}
-        </div>
 
         <div ref={tRef} style={{ marginBottom: 48, opacity: tVis ? 1 : 0, transition: "opacity 0.8s" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 28 }}>
