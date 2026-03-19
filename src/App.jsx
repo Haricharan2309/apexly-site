@@ -10,7 +10,7 @@ const B = {
   full: "Apexly Consulting",
   tagline: "Digital Growth Consulting",
   email: "hello@apexlyconsulting.com",
-  domain: "apexlyconsulting.com",h
+  domain: "apexlyconsulting.com",
   phone: "",
   ac: "#00d4aa",
   acLight: "#5aedc7",
