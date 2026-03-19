@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 
-/* ═══════════════════════════════════════════════════
-   APEXLY — DIGITAL GROWTH CONSULTING
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
+   APEXLY â DIGITAL GROWTH CONSULTING
    Cinematic scroll website
-   ═══════════════════════════════════════════════════ */
+   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 const B = {
   name: "APEXLY",
@@ -17,7 +17,7 @@ const B = {
   acDark: "#00a88a",
 };
 
-/* ── Hooks ── */
+/* ââ Hooks ââ */
 function useReveal(threshold = 0.14) {
   const ref = useRef(null);
   const [vis, set] = useState(false);
@@ -67,9 +67,9 @@ function Counter({ end, suffix = "", active }) {
 
 const go = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
-/* ═══════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
    NAV
-   ═══════════════════════════════════════════════════ */
+   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -119,9 +119,9 @@ function Nav() {
   );
 }
 
-/* ═══════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
    HERO
-   ═══════════════════════════════════════════════════ */
+   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
 function Hero() {
   const [show, setShow] = useState(false);
   const [pRef, pOff] = useParallax(0.15);
@@ -240,7 +240,7 @@ function Hero() {
           }}
           onMouseEnter={e => { e.target.style.borderColor = "rgba(0,212,170,0.3)"; e.target.style.color = B.ac; }}
           onMouseLeave={e => { e.target.style.borderColor = "rgba(255,255,255,0.12)"; e.target.style.color = "rgba(255,255,255,0.5)"; }}
-          >See Our Work ↓</button>
+          >See Our Work â</button>
         </div>
       </div>
 
@@ -257,9 +257,9 @@ function Hero() {
   );
 }
 
-/* ═══════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
    BRAND STATEMENT
-   ═══════════════════════════════════════════════════ */
+   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
 function BrandStatement() {
   const [ref, vis] = useReveal();
   return (
@@ -283,7 +283,7 @@ function BrandStatement() {
           fontFamily: "'Lora',serif", fontSize: "clamp(1.6rem,3.8vw,2.8rem)",
           color: "rgba(255,255,255,0.85)", lineHeight: 1.55, fontWeight: 400, margin: 0,
         }}>
-          Most businesses know they need a stronger digital presence — but between
+          Most businesses know they need a stronger digital presence â but between
           outdated websites, invisible search rankings, and hours wasted on
           repetitive tasks, it's hard to know <em style={{ color: B.ac, fontStyle: "italic" }}>where to begin</em>.
         </h2>
@@ -292,7 +292,7 @@ function BrandStatement() {
           lineHeight: 1.9, marginTop: 32, maxWidth: 600,
         }}>
           That's where Apexly comes in. We're a focused digital consulting studio that
-          partners with businesses to build real, measurable online growth — through
+          partners with businesses to build real, measurable online growth â through
           design, strategy, and modern technology. No jargon. No bloat. Just results.
         </p>
       </div>
@@ -300,9 +300,9 @@ function BrandStatement() {
   );
 }
 
-/* ═══════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
    SERVICES
-   ═══════════════════════════════════════════════════ */
+   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
 function ServiceBlock({ num, title, subtitle, desc, details, deliverables, idx }) {
   const [ref, vis] = useReveal(0.12);
   const isEven = idx % 2 === 0;
@@ -333,7 +333,7 @@ function ServiceBlock({ num, title, subtitle, desc, details, deliverables, idx }
               opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(12px)",
               transition: `all 0.6s cubic-bezier(0.16,1,0.3,1) ${0.4 + i * 0.08}s`,
             }}>
-              <span style={{ color: B.ac, fontSize: 8, marginTop: 7, flexShrink: 0 }}>▲</span>
+              <span style={{ color: B.ac, fontSize: 8, marginTop: 7, flexShrink: 0 }}>â²</span>
               <span style={{ fontFamily: "'Outfit',sans-serif", fontSize: 14, color: "rgba(255,255,255,0.55)", lineHeight: 1.6 }}>{d}</span>
             </div>
           ))}
@@ -389,9 +389,9 @@ function Services() {
   );
 }
 
-/* ═══════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
    CINEMATIC DIVIDER
-   ═══════════════════════════════════════════════════ */
+   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
 function CinematicDivider() {
   const [ref, vis] = useReveal();
   return (
@@ -406,7 +406,7 @@ function CinematicDivider() {
         <p style={{ fontFamily: "'Lora',serif", fontSize: "clamp(1.4rem,3vw,2.2rem)", color: "rgba(255,255,255,0.6)", lineHeight: 1.65, fontStyle: "italic", margin: 0 }}>
           We don't just build websites or run ads.
           We build systems that let business owners
-          focus on what they love — while their digital
+          focus on what they love â while their digital
           presence works in the background, every single day.
         </p>
       </div>
@@ -414,9 +414,9 @@ function CinematicDivider() {
   );
 }
 
-/* ═══════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
    APPROACH
-   ═══════════════════════════════════════════════════ */
+   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
 function Approach() {
   const [ref, vis] = useReveal();
   const steps = [
@@ -464,54 +464,11 @@ function Approach() {
     </section>
   );
 }
-
-/* ═══════════════════════════════════════════════════
-   RESULTS
-   ═══════════════════════════════════════════════════ */
-function Results() {
-    const [tRef, tVis] = useReveal();
-    const testimonials = [
-    { q: "They rebuilt our entire online presence and we saw results within the first month. The best part \u2014 they explained everything in plain English.", name: "Sarah M.", role: "Fitness Studio Owner" },
-    { q: "I was drowning in manual follow-ups. They set up automation that basically runs my client pipeline on autopilot now.", name: "James K.", role: "Consulting Firm Founder" },
-    { q: "No upselling. No jargon. Just a team that genuinely wanted to help our business grow. Our organic traffic tripled in six months.", name: "Maria L.", role: "E-commerce Director" },
-  ];
-
-  return (
-    <section id="results" style={{ padding: "clamp(80px,10vw,140px) 24px", background: "#070a0c" }}>
-      <div style={{ maxWidth: 1080, margin: "0 auto" }}>
-
-        <div ref={tRef} style={{ marginBottom: 48, opacity: tVis ? 1 : 0, transition: "opacity 0.8s" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 28 }}>
-            <div style={{ width: 32, height: 1, background: B.ac, opacity: 0.4 }} />
-            <span style={{ fontFamily: "'Outfit',sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: 4, textTransform: "uppercase", color: B.ac }}>Client Stories</span>
-          </div>
-        </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px,1fr))", gap: 24 }}>
-          {testimonials.map((t, i) => {
-            const [cRef, cVis] = useReveal(0.15);
-            return (
-              <article key={i} ref={cRef} style={{
-                padding: "36px 32px", background: "rgba(255,255,255,0.015)", border: "1px solid rgba(0,212,170,0.06)", position: "relative",
-                opacity: cVis ? 1 : 0, transform: cVis ? "translateY(0)" : "translateY(28px)", transition: `all 0.8s cubic-bezier(0.16,1,0.3,1) ${i * 0.12}s`,
-              }}>
-                <div style={{ position: "absolute", top: 0, left: 0, width: 20, height: 20, borderTop: `1px solid ${B.ac}`, borderLeft: `1px solid ${B.ac}`, opacity: 0.2 }} />
-                <div style={{ display: "flex", gap: 3, marginBottom: 20 }}>{[...Array(5)].map((_, j) => <span key={j} style={{ color: B.ac, fontSize: 12 }}>★</span>)}</div>
-                <blockquote style={{ fontFamily: "'Lora',serif", fontSize: 17, color: "rgba(255,255,255,0.55)", lineHeight: 1.75, fontStyle: "italic", margin: "0 0 28px" }}>"{t.q}"</blockquote>
-                <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", margin: 0 }}>{t.name}</p>
-                <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 12, color: "rgba(255,255,255,0.25)", margin: "4px 0 0" }}>{t.role}</p>
-              </article>
-            );
-          })}
-        </div>
-        <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 11, color: "rgba(255,255,255,0.1)", textAlign: "center", marginTop: 32, fontStyle: "italic" }}>* Sample testimonials \u2014 will be replaced with real client reviews.</p>
-      </div>
-    </section>
-  );
 }
 
-/* ═══════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
    ABOUT
-   ═══════════════════════════════════════════════════ */
+   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
 function About() {
   const [ref, vis] = useReveal();
   const values = [
@@ -540,18 +497,18 @@ function About() {
               A STUDIO IN ITS<br /><span style={{ color: B.ac }}>FOUNDING CHAPTER.</span>
             </h2>
             <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 15, color: "rgba(255,255,255,0.4)", lineHeight: 1.85, margin: "0 0 20px" }}>
-              We're in the early days — and we think that's our greatest advantage.
+              We're in the early days â and we think that's our greatest advantage.
               Every project gets our full, undivided attention. Every client gets
               direct access to the people doing the work. No layers, no account managers,
               no passing you off to a junior team.
             </p>
             <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 15, color: "rgba(255,255,255,0.4)", lineHeight: 1.85, margin: "0 0 20px" }}>
               We're building Apexly one exceptional project at a time. Our reputation is
-              everything — which means your results aren't just important, they're
+              everything â which means your results aren't just important, they're
               existential. When you win, we build our name.
             </p>
             <p style={{ fontFamily: "'Lora',serif", fontSize: 19, color: "rgba(255,255,255,0.6)", fontStyle: "italic", lineHeight: 1.6, margin: 0 }}>
-              We don't have decades of case studies yet — but we have the hunger,
+              We don't have decades of case studies yet â but we have the hunger,
               the skill, and the commitment to over-deliver on every engagement.
             </p>
           </div>
@@ -573,9 +530,9 @@ function About() {
   );
 }
 
-/* ═══════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
    FAQ
-   ═══════════════════════════════════════════════════ */
+   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
 function FAQ() {
   const [ref, vis] = useReveal();
   const [open, setOpen] = useState(null);
@@ -622,9 +579,9 @@ function FAQ() {
   );
 }
 
-/* ═══════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
    CONTACT
-   ═══════════════════════════════════════════════════ */
+   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
 function Contact() {
   const [ref, vis] = useReveal();
   const [sent, setSent] = useState(false);
@@ -656,7 +613,7 @@ function Contact() {
           LET'S BUILD<br /><span style={{ color: B.ac }}>SOMETHING GREAT.</span>
         </h2>
         <p style={{ fontFamily: "'Lora',serif", fontSize: 18, color: "rgba(255,255,255,0.4)", lineHeight: 1.7, fontStyle: "italic", marginBottom: 48 }}>
-          Book a free discovery call. Twenty minutes. No pitch, no commitment — just an honest conversation about where your business could go.
+          Book a free discovery call. Twenty minutes. No pitch, no commitment â just an honest conversation about where your business could go.
         </p>
 
         {!sent ? (
@@ -688,13 +645,13 @@ function Contact() {
             }}
             onMouseEnter={e => { e.target.style.background = B.acLight; }}
             onMouseLeave={e => { e.target.style.background = B.ac; }}
-            >Book My Free Discovery Call →</button>
-            <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 11, color: "rgba(255,255,255,0.15)", textAlign: "center", marginTop: 20 }}>No spam · No obligation · Response within 24 hours</p>
+            >Book My Free Discovery Call â</button>
+            <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 11, color: "rgba(255,255,255,0.15)", textAlign: "center", marginTop: 20 }}>No spam Â· No obligation Â· Response within 24 hours</p>
           </div>
         ) : (
           <div style={{ background: "rgba(0,212,170,0.03)", border: "1px solid rgba(0,212,170,0.12)", padding: "60px 40px", textAlign: "center" }}>
             <div style={{ width: 48, height: 48, margin: "0 auto 24px", border: `2px solid ${B.ac}`, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ color: B.ac, fontSize: 24 }}>✓</span>
+              <span style={{ color: B.ac, fontSize: 24 }}>â</span>
             </div>
             <h3 style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: 28, color: "#fff", letterSpacing: 3, margin: "0 0 12px" }}>MESSAGE RECEIVED</h3>
             <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 15, color: "rgba(255,255,255,0.4)", lineHeight: 1.7 }}>
@@ -708,9 +665,9 @@ function Contact() {
   );
 }
 
-/* ═══════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
    FOOTER
-   ═══════════════════════════════════════════════════ */
+   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
 function Footer() {
   return (
     <footer role="contentinfo" style={{ padding: "48px 24px", background: "#040606", borderTop: "1px solid rgba(0,212,170,0.06)" }}>
@@ -720,16 +677,16 @@ function Footer() {
           <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 12, color: "rgba(255,255,255,0.2)", marginTop: 6 }}>{B.tagline}</p>
         </div>
         <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 12, color: "rgba(255,255,255,0.15)" }}>
-          © 2026 {B.full}. All rights reserved. · {B.email}
+          Â© 2026 {B.full}. All rights reserved. Â· {B.email}
         </p>
       </div>
     </footer>
   );
 }
 
-/* ═══════════════════════════════════════════════════
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
    APP
-   ═══════════════════════════════════════════════════ */
+   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
 export default function App() {
   return (
     <div style={{ overflowX: "hidden", background: "#070a0c" }}>
@@ -750,7 +707,6 @@ export default function App() {
       <Services />
       <CinematicDivider />
       <Approach />
-      <Results />
       <About />
       <FAQ />
       <Contact />
