@@ -10,7 +10,7 @@ const B = {
   full: "Apexly Consulting",
   tagline: "Digital Growth Consulting",
   email: "hello@apexlyconsulting.com",
-  domain: "apexlyconsulting.com",
+  domain: "apexlyconsulting.com",h
   phone: "",
   ac: "#00d4aa",
   acLight: "#5aedc7",
@@ -472,9 +472,9 @@ function Results() {
   const [sRef, sVis] = useReveal();
   const [tRef, tVis] = useReveal();
   const stats = [
-    { end: 50, suffix: "+", label: "Projects Completed" },
+    
     { end: 3, suffix: "\u00D7", label: "Avg Lead Increase" },
-    { end: 15, suffix: "+", label: "Hours Saved Weekly" },
+    
     { end: 12, suffix: "+", label: "Industries Served" },
   ];
   const testimonials = [
