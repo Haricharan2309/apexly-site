@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
-   APEXLY â DIGITAL GROWTH CONSULTING
+/* ═══════════════════════════════════════════════════
+   APEXLY — DIGITAL GROWTH CONSULTING
    Cinematic scroll website
-   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   ═══════════════════════════════════════════════════ */
 
 const B = {
   name: "APEXLY",
@@ -17,7 +17,7 @@ const B = {
   acDark: "#00a88a",
 };
 
-/* ââ Hooks ââ */
+/* ── Hooks ── */
 function useReveal(threshold = 0.14) {
   const ref = useRef(null);
   const [vis, set] = useState(false);
@@ -67,9 +67,9 @@ function Counter({ end, suffix = "", active }) {
 
 const go = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* ═══════════════════════════════════════════════════
    NAV
-   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   ═══════════════════════════════════════════════════ */
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -119,9 +119,9 @@ function Nav() {
   );
 }
 
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* ═══════════════════════════════════════════════════
    HERO
-   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   ═══════════════════════════════════════════════════ */
 function Hero() {
   const [show, setShow] = useState(false);
   const [pRef, pOff] = useParallax(0.15);
@@ -240,7 +240,7 @@ function Hero() {
           }}
           onMouseEnter={e => { e.target.style.borderColor = "rgba(0,212,170,0.3)"; e.target.style.color = B.ac; }}
           onMouseLeave={e => { e.target.style.borderColor = "rgba(255,255,255,0.12)"; e.target.style.color = "rgba(255,255,255,0.5)"; }}
-          >See Our Work â</button>
+          >See Our Work ↓</button>
         </div>
       </div>
 
@@ -257,9 +257,9 @@ function Hero() {
   );
 }
 
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* ═══════════════════════════════════════════════════
    BRAND STATEMENT
-   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   ═══════════════════════════════════════════════════ */
 function BrandStatement() {
   const [ref, vis] = useReveal();
   return (
@@ -283,7 +283,7 @@ function BrandStatement() {
           fontFamily: "'Lora',serif", fontSize: "clamp(1.6rem,3.8vw,2.8rem)",
           color: "rgba(255,255,255,0.85)", lineHeight: 1.55, fontWeight: 400, margin: 0,
         }}>
-          Most businesses know they need a stronger digital presence â but between
+          Most businesses know they need a stronger digital presence — but between
           outdated websites, invisible search rankings, and hours wasted on
           repetitive tasks, it's hard to know <em style={{ color: B.ac, fontStyle: "italic" }}>where to begin</em>.
         </h2>
@@ -292,7 +292,7 @@ function BrandStatement() {
           lineHeight: 1.9, marginTop: 32, maxWidth: 600,
         }}>
           That's where Apexly comes in. We're a focused digital consulting studio that
-          partners with businesses to build real, measurable online growth â through
+          partners with businesses to build real, measurable online growth — through
           design, strategy, and modern technology. No jargon. No bloat. Just results.
         </p>
       </div>
@@ -300,9 +300,9 @@ function BrandStatement() {
   );
 }
 
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* ═══════════════════════════════════════════════════
    SERVICES
-   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   ═══════════════════════════════════════════════════ */
 function ServiceBlock({ num, title, subtitle, desc, details, deliverables, idx }) {
   const [ref, vis] = useReveal(0.12);
   const isEven = idx % 2 === 0;
@@ -333,7 +333,7 @@ function ServiceBlock({ num, title, subtitle, desc, details, deliverables, idx }
               opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(12px)",
               transition: `all 0.6s cubic-bezier(0.16,1,0.3,1) ${0.4 + i * 0.08}s`,
             }}>
-              <span style={{ color: B.ac, fontSize: 8, marginTop: 7, flexShrink: 0 }}>â²</span>
+              <span style=={{ color: B.ac, fontSize: 8, marginTop: 7, flexShrink: 0 }}>▶</span>
               <span style={{ fontFamily: "'Outfit',sans-serif", fontSize: 14, color: "rgba(255,255,255,0.55)", lineHeight: 1.6 }}>{d}</span>
             </div>
           ))}
@@ -349,7 +349,7 @@ function Services() {
     {
       num: "01", title: "WEBSITE DESIGN\n& DEVELOPMENT", subtitle: "Your 24/7 Sales Engine",
       desc: "A beautiful website means nothing if it doesn\u2019t convert. We design and build sites that look exceptional and turn visitors into paying customers.",
-      details: "Every website starts with strategy \u2014 understanding your audience, your goals, and what action you want visitors to take. We craft a custom design that reflects your brand, build it on modern technology for speed and reliability, and optimize every page for search engines from day one. From concept to launch, we handle everything \u2014 and make sure you can manage it after.",
+      details: "Every website starts with strategy \u2014 understanding your audience, your goals, what action you want visitors to take. We craft a custom design that reflects your brand, build it on modern technology for speed and reliability, and optimize every page for search engines from day one. From concept to launch, we handle everything \u2014 and make sure you can manage it after.",
       deliverables: ["Custom-designed pages tailored to your brand and audience", "Mobile-first responsive design across all devices", "On-page SEO foundations \u2014 meta tags, structure, speed", "Contact forms, booking systems, and lead capture", "Google Analytics and conversion tracking setup", "Content management system for easy self-updates", "Post-launch support and training walkthrough"],
     },
     {
@@ -389,9 +389,9 @@ function Services() {
   );
 }
 
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* ═══════════════════════════════════════════════════
    CINEMATIC DIVIDER
-   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   ═══════════════════════════════════════════════════ */
 function CinematicDivider() {
   const [ref, vis] = useReveal();
   return (
@@ -406,7 +406,7 @@ function CinematicDivider() {
         <p style={{ fontFamily: "'Lora',serif", fontSize: "clamp(1.4rem,3vw,2.2rem)", color: "rgba(255,255,255,0.6)", lineHeight: 1.65, fontStyle: "italic", margin: 0 }}>
           We don't just build websites or run ads.
           We build systems that let business owners
-          focus on what they love â while their digital
+          focus on what they love — while their digital
           presence works in the background, every single day.
         </p>
       </div>
@@ -414,9 +414,9 @@ function CinematicDivider() {
   );
 }
 
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* ═══════════════════════════════════════════════════
    APPROACH
-   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   ═══════════════════════════════════════════════════ */
 function Approach() {
   const [ref, vis] = useReveal();
   const steps = [
@@ -465,9 +465,9 @@ function Approach() {
   );
 }
 
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* ═══════════════════════════════════════════════════
    ABOUT
-   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   ═══════════════════════════════════════════════════ */
 function About() {
   const [ref, vis] = useReveal();
   const values = [
@@ -496,18 +496,18 @@ function About() {
               A STUDIO IN ITS<br /><span style={{ color: B.ac }}>FOUNDING CHAPTER.</span>
             </h2>
             <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 15, color: "rgba(255,255,255,0.4)", lineHeight: 1.85, margin: "0 0 20px" }}>
-              We're in the early days â and we think that's our greatest advantage.
+              We're in the early days — and we think that's our greatest advantage.
               Every project gets our full, undivided attention. Every client gets
               direct access to the people doing the work. No layers, no account managers,
               no passing you off to a junior team.
             </p>
             <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 15, color: "rgba(255,255,255,0.4)", lineHeight: 1.85, margin: "0 0 20px" }}>
               We're building Apexly one exceptional project at a time. Our reputation is
-              everything â which means your results aren't just important, they're
+              everything — which means your results aren't just important, they're
               existential. When you win, we build our name.
             </p>
             <p style={{ fontFamily: "'Lora',serif", fontSize: 19, color: "rgba(255,255,255,0.6)", fontStyle: "italic", lineHeight: 1.6, margin: 0 }}>
-              We don't have decades of case studies yet â but we have the hunger,
+              We don't have decades of case studies yet — but we have the hunger,
               the skill, and the commitment to over-deliver on every engagement.
             </p>
           </div>
@@ -529,9 +529,9 @@ function About() {
   );
 }
 
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* ═══════════════════════════════════════════════════
    FAQ
-   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   ═══════════════════════════════════════════════════ */
 function FAQ() {
   const [ref, vis] = useReveal();
   const [open, setOpen] = useState(null);
@@ -578,16 +578,51 @@ function FAQ() {
   );
 }
 
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* ═══════════════════════════════════════════════════
    CONTACT
-   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   ═══════════════════════════════════════════════════ */
 function Contact() {
   const [ref, vis] = useReveal();
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [form, setForm] = useState({ name: "", email: "", business: "", goals: "" });
+
+  const labelStyle = { fontFamily: "'Outfit',sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase", color: "rgba(255,255,255,0.25)", display: "block", marginBottom: 10 };
   const inputStyle = {
     width: "100%", padding: "14px 18px", background: "rgba(255,255,255,0.03)",
     border: "1px solid rgba(0,212,170,0.08)", color: "#fff",
     fontFamily: "'Outfit',sans-serif", fontSize: 15, outline: "none", transition: "border-color 0.3s",
+  };
+
+  const handleSubmit = async () => {
+    if (!form.name.trim() || !form.email.trim()) {
+      setError("Please fill in your name and email.");
+      return;
+    }
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch("https://formspree.io/f/xrbqwdlo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          business: form.business,
+          goals: form.goals,
+          _replyto: form.email,
+        }),
+      });
+      if (res.ok) {
+        setSent(true);
+      } else {
+        setError("Something went wrong. Please try again or email us directly at hello@apexlyconsulting.com");
+      }
+    } catch {
+      setError("Unable to send — please email hello@apexlyconsulting.com directly.");
+    }
+    setLoading(false);
   };
 
   return (
@@ -612,45 +647,53 @@ function Contact() {
           LET'S BUILD<br /><span style={{ color: B.ac }}>SOMETHING GREAT.</span>
         </h2>
         <p style={{ fontFamily: "'Lora',serif", fontSize: 18, color: "rgba(255,255,255,0.4)", lineHeight: 1.7, fontStyle: "italic", marginBottom: 48 }}>
-          Book a free discovery call. Twenty minutes. No pitch, no commitment â just an honest conversation about where your business could go.
+          Book a free discovery call. Twenty minutes. No pitch, no commitment {"\u2014"} just an honest conversation about where your business could go.
         </p>
 
         {!sent ? (
           <div style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(0,212,170,0.1)", padding: "clamp(28px,4vw,44px)", textAlign: "left" }}>
-            {[
-              { label: "Your Name", ph: "John Smith" },
-              { label: "Email", ph: "john@business.com" },
-              { label: "Business Name", ph: "Smith & Co." },
-            ].map((f, i) => (
-              <div key={i} style={{ marginBottom: 20 }}>
-                <label style={{ fontFamily: "'Outfit',sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase", color: "rgba(255,255,255,0.25)", display: "block", marginBottom: 10 }}>{f.label}</label>
-                <input placeholder={f.ph} style={inputStyle}
-                  onFocus={e => e.target.style.borderColor = "rgba(0,212,170,0.3)"}
-                  onBlur={e => e.target.style.borderColor = "rgba(0,212,170,0.08)"} />
-              </div>
-            ))}
             <div style={{ marginBottom: 20 }}>
-              <label style={{ fontFamily: "'Outfit',sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase", color: "rgba(255,255,255,0.25)", display: "block", marginBottom: 10 }}>Tell us about your goals</label>
-              <textarea placeholder="I need help with..." rows={3} style={{ ...inputStyle, resize: "vertical", fontFamily: "'Outfit',sans-serif" }}
+              <label style={labelStyle}>Your Name</label>
+              <input placeholder="John Smith" value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} style={inputStyle}
                 onFocus={e => e.target.style.borderColor = "rgba(0,212,170,0.3)"}
                 onBlur={e => e.target.style.borderColor = "rgba(0,212,170,0.08)"} />
             </div>
-            <button onClick={() => setSent(true)} style={{
+            <div style={{ marginBottom: 20 }}>
+              <label style={labelStyle}>Email</label>
+              <input type="email" placeholder="john@business.com" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} style={inputStyle}
+                onFocus={e => e.target.style.borderColor = "rgba(0,212,170,0.3)"}
+                onBlur={e => e.target.style.borderColor = "rgba(0,212,170,0.08)"} />
+            </div>
+            <div style={{ marginBottom: 20 }}>
+              <label style={labelStyle}>Business Name</label>
+              <input placeholder="Smith & Co." value={form.business} onChange={e => setForm({ ...form, business: e.target.value })} style={inputStyle}
+                onFocus={e => e.target.style.borderColor = "rgba(0,212,170,0.3)"}
+                onBlur={e => e.target.style.borderColor = "rgba(0,212,170,0.08)"} />
+            </div>
+            <div style={{ marginBottom: 20 }}>
+              <label style={labelStyle}>Tell us about your goals</label>
+              <textarea placeholder="I need help with..." rows={3} value={form.goals} onChange={e => setForm({ ...form, goals: e.target.value })} style={{ ...inputStyle, resize: "vertical", fontFamily: "'Outfit',sans-serif" }}
+                onFocus={e => e.target.style.borderColor = "rgba(0,212,170,0.3)"}
+                onBlur={e => e.target.style.borderColor = "rgba(0,212,170,0.08)"} />
+            </div>
+            {error && <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 13, color: "#ff6b6b", marginBottom: 16, textAlign: "center" }}>{error}</p>}
+            <button onClick={handleSubmit} disabled={loading} style={{
               width: "100%", padding: "18px", marginTop: 8,
               fontFamily: "'Outfit',sans-serif", fontSize: 13, fontWeight: 700,
               letterSpacing: 2, textTransform: "uppercase",
-              background: B.ac, color: "#070a0c", border: "none", cursor: "pointer",
+              background: loading ? "rgba(0,212,170,0.5)" : B.ac, color: "#070a0c", border: "none",
+              cursor: loading ? "not-allowed" : "pointer",
               transition: "all 0.3s", boxShadow: "0 0 40px rgba(0,212,170,0.12)",
             }}
-            onMouseEnter={e => { e.target.style.background = B.acLight; }}
-            onMouseLeave={e => { e.target.style.background = B.ac; }}
-            >Book My Free Discovery Call â</button>
-            <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 11, color: "rgba(255,255,255,0.15)", textAlign: "center", marginTop: 20 }}>No spam Â· No obligation Â· Response within 24 hours</p>
+            onMouseEnter={e => { if (!loading) e.target.style.background = B.acLight; }}
+            onMouseLeave={e => { if (!loading) e.target.style.background = B.ac; }}
+            >{loading ? "Sending..." : "Book My Free Discovery Call \u2192"}</button>
+            <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 11, color: "rgba(255,255,255,0.15)", textAlign: "center", marginTop: 20 }}>No spam {"\u00B7"} No obligation {"\u00B7"} Response within 24 hours</p>
           </div>
         ) : (
           <div style={{ background: "rgba(0,212,170,0.03)", border: "1px solid rgba(0,212,170,0.12)", padding: "60px 40px", textAlign: "center" }}>
             <div style={{ width: 48, height: 48, margin: "0 auto 24px", border: `2px solid ${B.ac}`, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ color: B.ac, fontSize: 24 }}>â</span>
+              <span style={{ color: B.ac, fontSize: 24 }}>{"\u2713"}</span>
             </div>
             <h3 style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: 28, color: "#fff", letterSpacing: 3, margin: "0 0 12px" }}>MESSAGE RECEIVED</h3>
             <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 15, color: "rgba(255,255,255,0.4)", lineHeight: 1.7 }}>
@@ -664,9 +707,9 @@ function Contact() {
   );
 }
 
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* ═══════════════════════════════════════════════════
    FOOTER
-   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   ═══════════════════════════════════════════════════ */
 function Footer() {
   return (
     <footer role="contentinfo" style={{ padding: "48px 24px", background: "#040606", borderTop: "1px solid rgba(0,212,170,0.06)" }}>
@@ -676,16 +719,16 @@ function Footer() {
           <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 12, color: "rgba(255,255,255,0.2)", marginTop: 6 }}>{B.tagline}</p>
         </div>
         <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 12, color: "rgba(255,255,255,0.15)" }}>
-          Â© 2026 {B.full}. All rights reserved. Â· {B.email}
+          © 2026 {B.full}. All rights reserved. · {B.email}
         </p>
       </div>
     </footer>
   );
 }
 
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* ═══════════════════════════════════════════════════
    APP
-   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   ═══════════════════════════════════════════════════ */
 export default function App() {
   return (
     <div style={{ overflowX: "hidden", background: "#070a0c" }}>
