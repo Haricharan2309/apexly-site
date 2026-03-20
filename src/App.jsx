@@ -96,7 +96,7 @@ function Nav() {
       </a>
 
       <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
-        {["services", "approach", "results", "about", "faq"].map((id) => (
+        {["services", "approach", "about", "faq"].map((id) => (
           <a key={id} onClick={() => go(id)} className="dsk-lnk" style={{
             fontFamily: "'Outfit',sans-serif", fontSize: 12, fontWeight: 600,
             letterSpacing: 2, textTransform: "uppercase",
@@ -313,7 +313,7 @@ function ServiceBlock({ num, title, subtitle, desc, details, deliverables, idx }
       alignItems: "flex-start", marginBottom: "clamp(80px,10vw,140px)",
       flexDirection: isEven ? "row" : "row-reverse",
       opacity: vis ? 1 : 0,
-      transform: vis ? "translateX(0)" : ctranslateX(${isEven ? -60 : 60}px)`,
+      transform: vis ? "translateX(0)" : `translateX(${isEven ? -60 : 60}px)`,
       transition: "all 1.1s cubic-bezier(0.16,1,0.3,1)",
     }}>
       <div style={{ flex: "1 1 320px" }}>
