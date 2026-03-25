@@ -240,7 +240,7 @@ function Hero() {
           }}
           onMouseEnter={e => { e.target.style.borderColor = "rgba(0,212,170,0.3)"; e.target.style.color = B.ac; }}
           onMouseLeave={e => { e.target.style.borderColor = "rgba(255,255,255,0.12)"; e.target.style.color = "rgba(255,255,255,0.5)"; }}
-          >See Our Work ↓</button>
+          >{"See Our Work \u2193"}</button>
         </div>
       </div>
 
@@ -283,7 +283,7 @@ function BrandStatement() {
           fontFamily: "'Lora',serif", fontSize: "clamp(1.6rem,3.8vw,2.8rem)",
           color: "rgba(255,255,255,0.85)", lineHeight: 1.55, fontWeight: 400, margin: 0,
         }}>
-          Most businesses know they need a stronger digital presence — but between
+          Most businesses know they need a stronger digital presence {"\u2014"} but between
           outdated websites, invisible search rankings, and hours wasted on
           repetitive tasks, it's hard to know <em style={{ color: B.ac, fontStyle: "italic" }}>where to begin</em>.
         </h2>
@@ -292,7 +292,7 @@ function BrandStatement() {
           lineHeight: 1.9, marginTop: 32, maxWidth: 600,
         }}>
           That's where Apexly comes in. We're a focused digital consulting studio that
-          partners with businesses to build real, measurable online growth — through
+          partners with businesses to build real, measurable online growth {"\u2014"} through
           design, strategy, and modern technology. No jargon. No bloat. Just results.
         </p>
       </div>
@@ -333,7 +333,7 @@ function ServiceBlock({ num, title, subtitle, desc, details, deliverables, idx }
               opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(12px)",
               transition: `all 0.6s cubic-bezier(0.16,1,0.3,1) ${0.4 + i * 0.08}s`,
             }}>
-              <span style=={{ color: B.ac, fontSize: 8, marginTop: 7, flexShrink: 0 }}>▶</span>
+              <span style={{ color: B.ac, fontSize: 8, marginTop: 7, flexShrink: 0 }}>{"\u25B6"}</span>
               <span style={{ fontFamily: "'Outfit',sans-serif", fontSize: 14, color: "rgba(255,255,255,0.55)", lineHeight: 1.6 }}>{d}</span>
             </div>
           ))}
@@ -406,7 +406,7 @@ function CinematicDivider() {
         <p style={{ fontFamily: "'Lora',serif", fontSize: "clamp(1.4rem,3vw,2.2rem)", color: "rgba(255,255,255,0.6)", lineHeight: 1.65, fontStyle: "italic", margin: 0 }}>
           We don't just build websites or run ads.
           We build systems that let business owners
-          focus on what they love — while their digital
+          focus on what they love {"\u2014"} while their digital
           presence works in the background, every single day.
         </p>
       </div>
@@ -496,18 +496,18 @@ function About() {
               A STUDIO IN ITS<br /><span style={{ color: B.ac }}>FOUNDING CHAPTER.</span>
             </h2>
             <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 15, color: "rgba(255,255,255,0.4)", lineHeight: 1.85, margin: "0 0 20px" }}>
-              We're in the early days — and we think that's our greatest advantage.
+              We're in the early days {"\u2014"} and we think that's our greatest advantage.
               Every project gets our full, undivided attention. Every client gets
               direct access to the people doing the work. No layers, no account managers,
               no passing you off to a junior team.
             </p>
             <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 15, color: "rgba(255,255,255,0.4)", lineHeight: 1.85, margin: "0 0 20px" }}>
               We're building Apexly one exceptional project at a time. Our reputation is
-              everything — which means your results aren't just important, they're
+              everything {"\u2014"} which means your results aren't just important, they're
               existential. When you win, we build our name.
             </p>
             <p style={{ fontFamily: "'Lora',serif", fontSize: 19, color: "rgba(255,255,255,0.6)", fontStyle: "italic", lineHeight: 1.6, margin: 0 }}>
-              We don't have decades of case studies yet — but we have the hunger,
+              We don't have decades of case studies yet {"\u2014"} but we have the hunger,
               the skill, and the commitment to over-deliver on every engagement.
             </p>
           </div>
@@ -620,7 +620,7 @@ function Contact() {
         setError("Something went wrong. Please try again or email us directly at hello@apexlyconsulting.com");
       }
     } catch {
-      setError("Unable to send — please email hello@apexlyconsulting.com directly.");
+      setError("Unable to send \u2014 please email hello@apexlyconsulting.com directly.");
     }
     setLoading(false);
   };
@@ -719,7 +719,7 @@ function Footer() {
           <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 12, color: "rgba(255,255,255,0.2)", marginTop: 6 }}>{B.tagline}</p>
         </div>
         <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 12, color: "rgba(255,255,255,0.15)" }}>
-          © 2026 {B.full}. All rights reserved. · {B.email}
+          {"\u00A9"} 2026 {B.full}. All rights reserved. {"\u00B7"} {B.email}
         </p>
       </div>
     </footer>
