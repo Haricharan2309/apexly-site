@@ -603,18 +603,18 @@ function Contact() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("https://formspree.io/f/xrbqwdlo", {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: form.name,
           email: form.email,
-          business: form.business,
+          businessName: form.business,
           goals: form.goals,
-          _replyto: form.email,
-        }),
+                  }),
       });
-      if (res.ok) {
+      const data = await res.json();
+      if (res.ok && data.success) {
         setSent(true);
       } else {
         setError("Something went wrong. Please try again or email us directly at hello@apexlyconsulting.com");
