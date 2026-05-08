@@ -11,7 +11,7 @@ const B = {
   tagline: "Digital Growth Consulting",
   email: "hello@apexlyconsulting.com",
   domain: "apexlyconsulting.com",
-  phone: "",
+  phone: "+1 (712) 582-5722",
   ac: "#00d4aa",
   acLight: "#5aedc7",
   acDark: "#00a88a",
@@ -719,7 +719,7 @@ function Footer() {
           <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 12, color: "rgba(255,255,255,0.2)", marginTop: 6 }}>{B.tagline}</p>
         </div>
         <p style={{ fontFamily: "'Outfit',sans-serif", fontSize: 12, color: "rgba(255,255,255,0.15)" }}>
-          {"\u00A9"} 2026 {B.full}. All rights reserved. {"\u00B7"} {B.email}
+          {"\u00A9"} 2026 {B.full}. All rights reserved. {"\u00B7"} {B.email} {"·"} {B.phone}
         </p>
       </div>
     </footer>
